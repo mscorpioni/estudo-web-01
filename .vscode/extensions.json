@@ -1,0 +1,9 @@
+// Este aquivo é útil caso haja algum erro nos settings, e pode-se buscar as extensões recomendadas na Guia Extensões > digitando "@recomendations"
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "PKief.material-icon-theme",
+    "rocketseat.theme-omni",
+    "ritwickdey.LiveServer"
+  ]
+}
