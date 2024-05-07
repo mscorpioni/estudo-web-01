@@ -38,6 +38,7 @@ body {
   background: image repeat position/size;
   */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh; /* setando a altura do viewport (ou seja, a tela) para 100 */
 }
 
 body * {
@@ -167,4 +168,19 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 12px;
+}
+
+/* 
+Media Queries.
+At(@) Rules: são regras que podemos configurar os parâmetros, para que se as condições forem satisfeitas, as ações sejam executadas.  
+*/
+@media (min-width: 700px) {
+  /*para alterar o background de acordo com o tamanho da tela*/
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
