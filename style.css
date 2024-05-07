@@ -90,11 +90,16 @@ body * {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  animation: slide-out 0.2s;
 }
 
 .light #switch button {
-  left: initial;
-  right: 0;
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+  transition: outline 0.1s;
 }
 
 #switch span {
@@ -171,9 +176,10 @@ footer {
 }
 
 /* 
-Media Queries.
-At(@) Rules: são regras que podemos configurar os parâmetros, para que se as condições forem satisfeitas, as ações sejam executadas.  
+AT(@) RULES: são regras que podemos configurar os parâmetros, para que se as condições forem satisfeitas, as ações sejam executadas.  
 */
+
+/* media queries */
 @media (min-width: 700px) {
   /*para alterar o background de acordo com o tamanho da tela*/
   :root {
@@ -182,5 +188,24 @@ At(@) Rules: são regras que podemos configurar os parâmetros, para que se as c
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }

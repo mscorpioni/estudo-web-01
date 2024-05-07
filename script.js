@@ -13,7 +13,7 @@ function toggleMode() {
   }
 
   /*
-  A função toogle acima executa automaticamente esta verificação abaixo
+  A função body.classList.toggle("light") acima executa automaticamente esta verificação abaixo
   if (body.classList.contains("light-mode")) {
     body.classList.remove("light-mode")
   } else {
